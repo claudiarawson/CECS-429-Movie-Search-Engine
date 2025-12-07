@@ -1,0 +1,280 @@
+[
+  {
+    "theater_name": "AMC Marina Pacifica 12",
+    "address": "6346 E. Pacific Coast Hwy.\nLong Beach, CA 90803",
+    "movies": [
+      {
+        "title": "The Metropolitan Opera: Andrea Chénier (2025)",
+        "showtimes": [
+          "2025-12-13T10:00"
+        ]
+      },
+      {
+        "title": "Ella McCay (2025)",
+        "showtimes": [
+          "2025-12-13T12:50",
+          "2025-12-13T16:00",
+          "2025-12-13T19:05",
+          "2025-12-13T22:15"
+        ]
+      },
+      {
+        "title": "The Metropolitan Opera: Andrea Chénier (2025)",
+        "showtimes": [
+          "2025-12-13T10:00"
+        ]
+      },
+      {
+        "title": "Dr. Seuss’ How the Grinch Stole Christmas (2000): 25th Anniversary",
+        "showtimes": [
+          "2025-12-13T10:30",
+          "2025-12-13T13:00",
+          "2025-12-13T15:30"
+        ]
+      },
+      {
+        "title": "Five Nights at Freddy's 2 (2025)",
+        "showtimes": [
+          "2025-12-13T10:30",
+          "2025-12-13T13:10",
+          "2025-12-13T15:50",
+          "2025-12-13T18:30",
+          "2025-12-13T21:10"
+        ]
+      },
+      {
+        "title": "Zootopia 2 (2025)",
+        "showtimes": [
+          "2025-12-13T13:20",
+          "2025-12-13T21:35",
+          "2025-12-13T10:35",
+          "2025-12-13T16:05",
+          "2025-12-13T18:50"
+        ]
+      },
+      {
+        "title": "Wicked: For Good (2025)",
+        "showtimes": [
+          "2025-12-13T10:45",
+          "2025-12-13T14:00",
+          "2025-12-13T17:15",
+          "2025-12-13T20:30"
+        ]
+      },
+      {
+        "title": "Elf",
+        "showtimes": [
+          "2025-12-13T10:30"
+        ]
+      },
+      {
+        "title": "Dick Van Dyke 100th Celebration",
+        "showtimes": [
+          "2025-12-13T16:00",
+          "2025-12-13T19:00"
+        ]
+      },
+      {
+        "title": "The Metropolitan Opera: Andrea Chénier (2025)",
+        "showtimes": [
+          "2025-12-13T10:00"
+        ]
+      },
+      {
+        "title": "Dr. Seuss’ How the Grinch Stole Christmas (2000): 25th Anniversary",
+        "showtimes": [
+          "2025-12-13T17:00",
+          "2025-12-13T11:05",
+          "2025-12-13T13:50"
+        ]
+      },
+      {
+        "title": "Ella McCay (2025)",
+        "showtimes": [
+          "2025-12-13T11:10",
+          "2025-12-13T14:10",
+          "2025-12-13T17:10",
+          "2025-12-13T20:05",
+          "2025-12-13T22:50"
+        ]
+      },
+      {
+        "title": "Silent Night, Deadly Night (2025)",
+        "showtimes": [
+          "2025-12-13T17:05",
+          "2025-12-13T19:40",
+          "2025-12-13T22:15"
+        ]
+      },
+      {
+        "title": "The Shining (2025)",
+        "showtimes": [
+          "2025-12-13T13:00",
+          "2025-12-13T22:00"
+        ]
+      },
+      {
+        "title": "Rolling Stones - At the Max (2025)",
+        "showtimes": [
+          "2025-12-13T16:20"
+        ]
+      },
+      {
+        "title": "The Polar Express",
+        "showtimes": [
+          "2025-12-13T11:25"
+        ]
+      },
+      {
+        "title": "Ella McCay (2025)",
+        "showtimes": [
+          "2025-12-13T11:00",
+          "2025-12-13T13:45",
+          "2025-12-13T16:30",
+          "2025-12-13T19:15",
+          "2025-12-13T22:00"
+        ]
+      },
+      {
+        "title": "Dr. Seuss’ How the Grinch Stole Christmas (2000): 25th Anniversary",
+        "showtimes": [
+          "2025-12-13T16:35"
+        ]
+      },
+      {
+        "title": "Ella McCay (2025)",
+        "showtimes": [
+          "2025-12-13T11:40",
+          "2025-12-13T14:15",
+          "2025-12-13T16:50",
+          "2025-12-13T19:30",
+          "2025-12-13T22:20",
+          "2025-12-13T16:00"
+        ]
+      },
+      {
+        "title": "REBBECA: Becky G (2025)",
+        "showtimes": [
+          "2025-12-13T18:20",
+          "2025-12-13T19:00"
+        ]
+      },
+      {
+        "title": "It's a Wonderful Life (1946)",
+        "showtimes": [
+          "2025-12-13T19:10"
+        ]
+      },
+      {
+        "title": "Dr. Seuss’ How the Grinch Stole Christmas (2000): 25th Anniversary",
+        "showtimes": [
+          "2025-12-13T12:00",
+          "2025-12-13T14:45"
+        ]
+      },
+      {
+        "title": "Ella McCay (2025)",
+        "showtimes": [
+          "2025-12-13T12:20",
+          "2025-12-13T15:15",
+          "2025-12-13T18:10",
+          "2025-12-13T21:05"
+        ]
+      },
+      {
+        "title": "The Polar Express",
+        "showtimes": [
+          "2025-12-13T12:10"
+        ]
+      },
+      {
+        "title": "Dick Van Dyke 100th Celebration",
+        "showtimes": [
+          "2025-12-13T16:15",
+          "2025-12-13T18:30"
+        ]
+      },
+      {
+        "title": "The Metropolitan Opera: Andrea Chénier (2025)",
+        "showtimes": [
+          "2025-12-13T10:00"
+        ]
+      },
+      {
+        "title": "Dr. Seuss’ How the Grinch Stole Christmas (2000): 25th Anniversary",
+        "showtimes": [
+          "2025-12-13T09:35",
+          "2025-12-13T12:00",
+          "2025-12-13T14:30",
+          "2025-12-13T17:00"
+        ]
+      },
+      {
+        "title": "Ella McCay (2025)",
+        "showtimes": [
+          "2025-12-13T11:00",
+          "2025-12-13T13:50",
+          "2025-12-13T16:40",
+          "2025-12-13T19:30",
+          "2025-12-13T22:20"
+        ]
+      },
+      {
+        "title": "Silent Night, Deadly Night (2025)",
+        "showtimes": [
+          "2025-12-13T10:40",
+          "2025-12-13T13:10",
+          "2025-12-13T15:40",
+          "2025-12-13T18:10",
+          "2025-12-13T20:40",
+          "2025-12-13T23:10"
+        ]
+      },
+      {
+        "title": "REBBECA: Becky G (2025)",
+        "showtimes": [
+          "2025-12-13T14:05"
+        ]
+      },
+      {
+        "title": "Five Nights at Freddy's 2 (2025)",
+        "showtimes": [
+          "2025-12-13T12:00",
+          "2025-12-13T14:40",
+          "2025-12-13T17:20",
+          "2025-12-13T20:00",
+          "2025-12-13T22:40"
+        ]
+      },
+      {
+        "title": "Zootopia 2 (2025)",
+        "showtimes": [
+          "2025-12-13T09:35",
+          "2025-12-13T10:05",
+          "2025-12-13T12:45",
+          "2025-12-13T15:25",
+          "2025-12-13T18:05",
+          "2025-12-13T20:45",
+          "2025-12-13T23:25"
+        ]
+      },
+      {
+        "title": "Wicked: For Good (2025)",
+        "showtimes": [
+          "2025-12-13T10:30",
+          "2025-12-13T13:40",
+          "2025-12-13T16:50",
+          "2025-12-13T20:00",
+          "2025-12-13T23:10"
+        ]
+      },
+      {
+        "title": "Elf",
+        "showtimes": [
+          "2025-12-13T09:40",
+          "2025-12-13T12:00"
+        ]
+      }
+    ]
+  }
+]
