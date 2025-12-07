@@ -68,7 +68,7 @@ class MovieChatbot:
         
         # Optional filtering
         if results:
-            filter_choice = input("\nFilter results? (1=By date, 2=By time, 3=No): ").strip()
+            filter_choice = input("\nFilter results? (1=By date, 2=By time, 3=Display all): ").strip()
             
             if filter_choice == "1":
                 date_str = input("Enter date (YYYY-MM-DD) or press Enter for today: ").strip()
