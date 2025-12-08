@@ -5,99 +5,106 @@ from bs4 import BeautifulSoup
 import json
 import time
 
+link_list = ["https://www.fandango.com/90840_movietimes?date=2025-12-14",
+             "https://www.fandango.com/90840_movietimes?date=2025-12-15",
+             "https://www.fandango.com/90840_movietimes?date=2025-12-16",
+             "https://www.fandango.com/90840_movietimes?date=2025-12-17",
+             "https://www.fandango.com/90840_movietimes?date=2025-12-18",
+             "https://www.fandango.com/90840_movietimes?date=2025-12-19",
+             "https://www.fandango.com/90840_movietimes?date=2025-12-20",
+             ]
 firefox_options = Options()
 firefox_options.add_argument("--headless")
 driver = webdriver.Firefox(options=firefox_options)
+for x in link_list:
+    time.sleep(1)
+    driver.get(x)
+    html = driver.page_source
+    soup = BeautifulSoup(html, 'html.parser')
 
-driver.get("https://www.fandango.com/90840_movietimes?date=2025-12-20")
-html = driver.page_source
-soup = BeautifulSoup(html, 'html.parser')
+    time.sleep(1)
 
-time.sleep(1)
+    # Extract date
+    date_el = driver.find_element("css selector", "a.js-fd-carousel-focus-elem.date-picker__button.fd-carousel--last-selected")
+    date_href = date_el.get_attribute("href")
+    date = date_href.split("?date=", 1)[1]   # yyyy-mm-dd
 
-# Extract date
-date_el = driver.find_element("css selector", "a.js-fd-carousel-focus-elem.date-picker__button.fd-carousel--last-selected")
-date_href = date_el.get_attribute("href")
-date = date_href.split("?date=", 1)[1]   # yyyy-mm-dd
+    # Container for JSON output
+    results = []
 
-# Container for JSON output
-results = []
+    theater_containers = driver.find_elements("css selector","li.shared-showtimes__container")
 
-theater_containers = driver.find_elements("css selector","ul.shared-showtimes__wrapper")
+    for container in theater_containers:
 
-for container in theater_containers:
+        # Theater name
+        name_el = container.find_element("css selector", "a.shared-theater-header__name-link")
+        theater_name = name_el.text.strip()
 
-    # Theater name
-    name_el = container.find_element("css selector", "a.shared-theater-header__name-link")
-    theater_name = name_el.text.strip()
+        # Theater address
+        address_el = container.find_element("css selector", "address.shared-theater-header__address")
+        theater_address = address_el.text.strip()
 
-    # Theater address
-    address_el = container.find_element("css selector", "address.shared-theater-header__address")
-    theater_address = address_el.text.strip()
+        theater_data = {
+            "theater_name": theater_name,
+            "address": theater_address,
+            "movies": []
+        }
 
-    # Build theater entry
-    theater_data = {
-        "theater_name": theater_name,
-        "address": theater_address,
-        "movies": []
-    }
+        # Movies for THIS theater only
+        movie_containers = container.find_elements("css selector", "li.shared-movie-showtimes")
 
-    # Movies in this theater
-    movie_containers = container.find_elements("css selector", "li.shared-movie-showtimes")
+        for m_container in movie_containers:
 
-    for m_container in movie_containers:
+            movie_title_el = m_container.find_element("css selector", "a.shared-movie-showtimes__movie-title-link")
+            movie_title = movie_title_el.text.strip()
 
-        # Movie title
-        movie_title_el = m_container.find_element("css selector", "a.shared-movie-showtimes__movie-title-link")
-        movie_title = movie_title_el.text.strip()
+            showtime_els = m_container.find_elements("css selector", "ol.showtimes-btn-list a")
+            showtimes = [s.text.strip() for s in showtime_els if s.text.strip()]
 
-        # Showtimes
-        showtime_els = m_container.find_elements("css selector", "ol.showtimes-btn-list a")
-        showtimes = [s.text.strip() for s in showtime_els if s.text.strip()]
+            # Convert showtimes to ISO datetime format
+            formatted_times = []
+            for t in showtimes:
+                t = t.lower().strip()
 
-        # Convert showtimes to ISO datetime format
-        formatted_times = []
-        for t in showtimes:
-            t = t.lower().strip()
+                # Remove spaces like "3:15 p"
+                t = t.replace(" ", "")
 
-            # Remove spaces like "3:15 p"
-            t = t.replace(" ", "")
+                # Determine AM/PM
+                is_pm = t.endswith("p")
+                is_am = t.endswith("a")
+                t = t[:-1]  # remove trailing 'a' or 'p'
 
-            # Determine AM/PM
-            is_pm = t.endswith("p")
-            is_am = t.endswith("a")
-            t = t[:-1]  # remove trailing 'a' or 'p'
+                # Handle times missing minutes (e.g. "9p")
+                if ":" in t:
+                    hour_str, minute_str = t.split(":")
+                else:
+                    hour_str, minute_str = t, "00"
 
-            # Handle times missing minutes (e.g. "9p")
-            if ":" in t:
-                hour_str, minute_str = t.split(":")
-            else:
-                hour_str, minute_str = t, "00"
+                hour = int(hour_str)
+                minute = int(minute_str)
 
-            hour = int(hour_str)
-            minute = int(minute_str)
+                # Convert to 24-hour
+                if is_pm and hour != 12:
+                    hour += 12
+                if is_am and hour == 12:
+                    hour = 0
 
-            # Convert to 24-hour
-            if is_pm and hour != 12:
-                hour += 12
-            if is_am and hour == 12:
-                hour = 0
+                hhmm = f"{hour:02d}:{minute:02d}"
+                iso_dt = f"{date}T{hhmm}"
+                formatted_times.append(iso_dt)
 
-            hhmm = f"{hour:02d}:{minute:02d}"
-            iso_dt = f"{date}T{hhmm}"
-            formatted_times.append(iso_dt)
+            # Add to theater
+            theater_data["movies"].append({
+                "title": movie_title,
+                "showtimes": formatted_times
+            })
 
-        # Add to theater
-        theater_data["movies"].append({
-            "title": movie_title,
-            "showtimes": formatted_times
-        })
+        results.append(theater_data)
 
-    results.append(theater_data)
-file_name = f"{date}-fandango.json"
-# Save to JSON file
-with open(file_name, "w", encoding="utf-8") as f:
-    json.dump(results, f, indent=2, ensure_ascii=False)
+    file_name = f"{date}-fandango.json"
+    # Save to JSON file
+    with open(file_name, "w", encoding="utf-8") as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
+        print(f"Scraping complete. {file_name} created")
 
 driver.quit()
-print(f"Scraping complete. {file_name} created")

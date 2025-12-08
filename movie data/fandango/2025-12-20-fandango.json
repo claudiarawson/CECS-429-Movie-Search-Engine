@@ -44,7 +44,13 @@
           "2025-12-20T16:50",
           "2025-12-20T22:20"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Cinemark At The Pike Outlets and XD",
+    "address": "99 South Pine Avenue\nLong Beach, CA 90802",
+    "movies": [
       {
         "title": "Avatar: Fire and Ash (2025)",
         "showtimes": [
@@ -79,6 +85,16 @@
         ]
       },
       {
+        "title": "The Housemaid (2025)",
+        "showtimes": [
+          "2025-12-20T09:10",
+          "2025-12-20T12:20",
+          "2025-12-20T15:30",
+          "2025-12-20T18:40",
+          "2025-12-20T21:50"
+        ]
+      },
+      {
         "title": "The SpongeBob Movie: Search for SquarePants (2025)",
         "showtimes": [
           "2025-12-20T10:35",
@@ -89,7 +105,13 @@
           "2025-12-20T20:55",
           "2025-12-20T23:30"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regal Edwards Long Beach ScreenX & IMAX",
+    "address": "7501 East Carson St.\nLong Beach, CA 90808",
+    "movies": [
       {
         "title": "A Christmas Story (1983)",
         "showtimes": [
@@ -157,13 +179,22 @@
           "2025-12-20T19:25",
           "2025-12-20T21:55"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Starlight Lakewood Center",
+    "address": "5200 Faculty Ave.\nLakewood, CA 90712",
+    "movies": [
       {
         "title": "Avatar: Fire and Ash (2025)",
         "showtimes": [
           "2025-12-20T12:05",
           "2025-12-20T16:10",
-          "2025-12-20T20:20"
+          "2025-12-20T20:20",
+          "2025-12-20T11:00",
+          "2025-12-20T15:10",
+          "2025-12-20T19:20"
         ]
       },
       {
@@ -185,7 +216,13 @@
           "2025-12-20T19:00",
           "2025-12-20T21:20"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "West Grove Cinemas",
+    "address": "12111 Valley View St.\nGarden Grove, CA 92845",
+    "movies": [
       {
         "title": "Avatar: Fire and Ash (2025)",
         "showtimes": [
@@ -203,7 +240,13 @@
           "2025-12-20T19:00",
           "2025-12-20T21:20"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Harkins Cerritos 16",
+    "address": "600 Los Cerritos Mall\nCerritos, CA 90703",
+    "movies": [
       {
         "title": "Avatar: Fire and Ash (2025)",
         "showtimes": [
@@ -261,7 +304,13 @@
         "showtimes": [
           "2025-12-20T19:10"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regency Westminster 10",
+    "address": "6721 Westminster Blvd.\nWestminster, CA 92683",
+    "movies": [
       {
         "title": "Avatar: Fire and Ash (2025)",
         "showtimes": [
@@ -293,7 +342,13 @@
           "2025-12-20T18:40",
           "2025-12-20T21:00"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regal Edwards Cerritos",
+    "address": "12761 Towne Center Drive\nCerritos, CA 90701",
+    "movies": [
       {
         "title": "A Christmas Story (1983)",
         "showtimes": [
@@ -347,7 +402,13 @@
           "2025-12-20T19:10",
           "2025-12-20T21:50"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Cinemark Century Huntington Beach and XD",
+    "address": "7777 Edinger Ave. Suite 170\nHuntington Beach, CA 92647",
+    "movies": [
       {
         "title": "Avatar: Fire and Ash (2025)",
         "showtimes": [
@@ -421,7 +482,13 @@
           "2025-12-20T19:30",
           "2025-12-20T22:00"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Krikorian Premiere Theatres",
+    "address": "8290 La Palma Ave.\nBuena Park, CA 90620",
+    "movies": [
       {
         "title": "Avatar: Fire and Ash (2025)",
         "showtimes": [

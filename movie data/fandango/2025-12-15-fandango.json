@@ -11,7 +11,13 @@
           "2025-12-15T19:05",
           "2025-12-15T22:15"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Cinemark At The Pike Outlets and XD",
+    "address": "99 South Pine Avenue\nLong Beach, CA 90802",
+    "movies": [
       {
         "title": "Crunchyroll Anime Nights SNEAK PEEK (2025)",
         "showtimes": [
@@ -60,14 +66,13 @@
         "showtimes": [
           "2025-12-15T19:00"
         ]
-      },
-      {
-        "title": "A Room With a View",
-        "showtimes": [
-          "2025-12-15T11:10",
-          "2025-12-15T19:10"
-        ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regal Edwards Long Beach ScreenX & IMAX",
+    "address": "7501 East Carson St.\nLong Beach, CA 90808",
+    "movies": [
       {
         "title": "REGAL: Monday Mystery Movie",
         "showtimes": [
@@ -111,7 +116,13 @@
           "2025-12-15T12:25",
           "2025-12-15T18:25"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Starlight Lakewood Center",
+    "address": "5200 Faculty Ave.\nLakewood, CA 90712",
+    "movies": [
       {
         "title": "Ella McCay (2025)",
         "showtimes": [
@@ -121,7 +132,18 @@
           "2025-12-15T19:15",
           "2025-12-15T22:00"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "West Grove Cinemas",
+    "address": "12111 Valley View St.\nGarden Grove, CA 92845",
+    "movies": []
+  },
+  {
+    "theater_name": "Harkins Cerritos 16",
+    "address": "600 Los Cerritos Mall\nCerritos, CA 90703",
+    "movies": [
       {
         "title": "Harkins Secret Cinema",
         "showtimes": [
@@ -148,7 +170,18 @@
           "2025-12-15T18:20",
           "2025-12-15T21:10"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regency Westminster 10",
+    "address": "6721 Westminster Blvd.\nWestminster, CA 92683",
+    "movies": []
+  },
+  {
+    "theater_name": "Regal Edwards Cerritos",
+    "address": "12761 Towne Center Drive\nCerritos, CA 90701",
+    "movies": [
       {
         "title": "REGAL: Monday Mystery Movie",
         "showtimes": [
@@ -182,7 +215,13 @@
           "2025-12-15T14:05",
           "2025-12-15T19:10"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Cinemark Century Huntington Beach and XD",
+    "address": "7777 Edinger Ave. Suite 170\nHuntington Beach, CA 92647",
+    "movies": [
       {
         "title": "Crunchyroll Anime Nights SNEAK PEEK (2025)",
         "showtimes": [
@@ -261,6 +300,22 @@
         "title": "Cinemark Secret Movie Series",
         "showtimes": [
           "2025-12-15T19:00"
+        ]
+      }
+    ]
+  },
+  {
+    "theater_name": "Krikorian Premiere Theatres",
+    "address": "8290 La Palma Ave.\nBuena Park, CA 90620",
+    "movies": [
+      {
+        "title": "Silent Night, Deadly Night (2025)",
+        "showtimes": [
+          "2025-12-15T12:10",
+          "2025-12-15T14:40",
+          "2025-12-15T17:10",
+          "2025-12-15T19:40",
+          "2025-12-15T22:10"
         ]
       }
     ]
