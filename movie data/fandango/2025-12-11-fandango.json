@@ -20,7 +20,13 @@
           "2025-12-11T18:30",
           "2025-12-11T22:05"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Cinemark At The Pike Outlets and XD",
+    "address": "99 South Pine Avenue\nLong Beach, CA 90802",
+    "movies": [
       {
         "title": "Five Nights at Freddy's 2 (2025)",
         "showtimes": [
@@ -65,7 +71,13 @@
           "2025-12-11T17:15",
           "2025-12-11T20:30"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regal Edwards Long Beach ScreenX & IMAX",
+    "address": "7501 East Carson St.\nLong Beach, CA 90808",
+    "movies": [
       {
         "title": "The Christmas Chronicles: Part Two",
         "showtimes": [
@@ -130,25 +142,32 @@
         "title": "Five Nights at Freddy's 2 (2025)",
         "showtimes": [
           "2025-12-11T11:05",
+          "2025-12-11T12:25",
           "2025-12-11T13:10",
           "2025-12-11T13:50",
           "2025-12-11T14:40",
           "2025-12-11T15:50",
           "2025-12-11T16:35",
+          "2025-12-11T17:25",
           "2025-12-11T18:30",
           "2025-12-11T19:20",
           "2025-12-11T21:10",
-          "2025-12-11T22:10"
+          "2025-12-11T22:10",
+          "2025-12-11T22:45"
         ]
       },
       {
         "title": "JUJUTSU KAISEN: Execution (2025)",
         "showtimes": [
-          "2025-12-11T12:20",
-          "2025-12-11T17:20",
-          "2025-12-11T22:20",
+          "2025-12-11T11:10",
           "2025-12-11T14:50",
-          "2025-12-11T19:50"
+          "2025-12-11T19:50",
+          "2025-12-11T22:45",
+          "2025-12-11T12:20",
+          "2025-12-11T13:40",
+          "2025-12-11T17:20",
+          "2025-12-11T20:20",
+          "2025-12-11T22:20"
         ]
       },
       {
@@ -258,7 +277,7 @@
       {
         "title": "The Running Man (2025)",
         "showtimes": [
-          "2025-12-11T12:15"
+          "2025-12-11T11:35"
         ]
       },
       {
@@ -288,14 +307,14 @@
       {
         "title": "One Battle After Another (2025)",
         "showtimes": [
-          "2025-12-11T12:45",
-          "2025-12-11T20:20"
+          "2025-12-11T14:45",
+          "2025-12-11T21:50"
         ]
       },
       {
         "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle (2025)",
         "showtimes": [
-          "2025-12-11T16:25"
+          "2025-12-11T18:20"
         ]
       },
       {
@@ -303,7 +322,13 @@
         "showtimes": [
           "2025-12-11T11:30"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Starlight Lakewood Center",
+    "address": "5200 Faculty Ave.\nLakewood, CA 90712",
+    "movies": [
       {
         "title": "Ella McCay (2025)",
         "showtimes": [
@@ -456,7 +481,13 @@
         "showtimes": [
           "2025-12-11T11:15"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "West Grove Cinemas",
+    "address": "12111 Valley View St.\nGarden Grove, CA 92845",
+    "movies": [
       {
         "title": "Five Nights at Freddy's 2 (2025)",
         "showtimes": [
@@ -485,7 +516,13 @@
           "2025-12-11T19:05",
           "2025-12-11T22:05"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Harkins Cerritos 16",
+    "address": "600 Los Cerritos Mall\nCerritos, CA 90703",
+    "movies": [
       {
         "title": "Ella McCay (2025)",
         "showtimes": [
@@ -614,7 +651,13 @@
           "2025-12-11T20:20",
           "2025-12-11T22:00"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regency Westminster 10",
+    "address": "6721 Westminster Blvd.\nWestminster, CA 92683",
+    "movies": [
       {
         "title": "Five Nights at Freddy's 2 (2025)",
         "showtimes": [
@@ -685,12 +728,26 @@
           "2025-12-11T19:50",
           "2025-12-11T17:05"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regal Edwards Cerritos",
+    "address": "12761 Towne Center Drive\nCerritos, CA 90701",
+    "movies": [
       {
         "title": "The Christmas Chronicles: Part Two",
         "showtimes": [
           "2025-12-11T12:45",
           "2025-12-11T18:45"
+        ]
+      },
+      {
+        "title": "Ella McCay (2025)",
+        "showtimes": [
+          "2025-12-11T14:30",
+          "2025-12-11T17:25",
+          "2025-12-11T20:20"
         ]
       },
       {
@@ -761,12 +818,15 @@
       {
         "title": "Predator: Badlands (2025)",
         "showtimes": [
-          "2025-12-11T13:00",
-          "2025-12-11T15:50",
-          "2025-12-11T18:35",
-          "2025-12-11T21:20"
+          "2025-12-11T11:55"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Cinemark Century Huntington Beach and XD",
+    "address": "7777 Edinger Ave. Suite 170\nHuntington Beach, CA 92647",
+    "movies": [
       {
         "title": "Ella McCay (2025)",
         "showtimes": [
@@ -840,6 +900,20 @@
           "2025-12-11T16:50",
           "2025-12-11T20:00",
           "2025-12-11T22:40"
+        ]
+      }
+    ]
+  },
+  {
+    "theater_name": "Krikorian Premiere Theatres",
+    "address": "8290 La Palma Ave.\nBuena Park, CA 90620",
+    "movies": [
+      {
+        "title": "Silent Night, Deadly Night (2025)",
+        "showtimes": [
+          "2025-12-11T17:00",
+          "2025-12-11T19:30",
+          "2025-12-11T22:00"
         ]
       }
     ]

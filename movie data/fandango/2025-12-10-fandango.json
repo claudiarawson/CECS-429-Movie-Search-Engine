@@ -102,7 +102,13 @@
         "showtimes": [
           "2025-12-10T22:15"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Cinemark At The Pike Outlets and XD",
+    "address": "99 South Pine Avenue\nLong Beach, CA 90802",
+    "movies": [
       {
         "title": "A Christmas Story (1983)",
         "showtimes": [
@@ -216,7 +222,13 @@
           "2025-12-10T17:25",
           "2025-12-10T20:10"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regal Edwards Long Beach ScreenX & IMAX",
+    "address": "7501 East Carson St.\nLong Beach, CA 90808",
+    "movies": [
       {
         "title": "REBBECA: Becky G (2025)",
         "showtimes": [
@@ -266,12 +278,14 @@
         "showtimes": [
           "2025-12-10T11:05",
           "2025-12-10T12:05",
+          "2025-12-10T12:35",
           "2025-12-10T13:05",
           "2025-12-10T13:50",
           "2025-12-10T14:40",
           "2025-12-10T15:45",
           "2025-12-10T16:35",
           "2025-12-10T18:25",
+          "2025-12-10T18:50",
           "2025-12-10T19:20",
           "2025-12-10T21:05",
           "2025-12-10T22:10",
@@ -282,11 +296,15 @@
         "title": "JUJUTSU KAISEN: Execution (2025)",
         "showtimes": [
           "2025-12-10T18:30",
-          "2025-12-10T12:20",
-          "2025-12-10T17:20",
-          "2025-12-10T22:20",
+          "2025-12-10T11:10",
           "2025-12-10T14:50",
-          "2025-12-10T19:50"
+          "2025-12-10T19:50",
+          "2025-12-10T22:45",
+          "2025-12-10T12:20",
+          "2025-12-10T13:40",
+          "2025-12-10T17:20",
+          "2025-12-10T20:20",
+          "2025-12-10T22:20"
         ]
       },
       {
@@ -343,6 +361,7 @@
       {
         "title": "Rental Family (2025)",
         "showtimes": [
+          "2025-12-10T11:10",
           "2025-12-10T13:15",
           "2025-12-10T16:00",
           "2025-12-10T22:25"
@@ -386,8 +405,8 @@
       {
         "title": "The Running Man (2025)",
         "showtimes": [
-          "2025-12-10T13:00",
-          "2025-12-10T18:50"
+          "2025-12-10T11:40",
+          "2025-12-10T18:40"
         ]
       },
       {
@@ -425,8 +444,8 @@
       {
         "title": "One Battle After Another (2025)",
         "showtimes": [
-          "2025-12-10T12:45",
-          "2025-12-10T20:20"
+          "2025-12-10T15:00",
+          "2025-12-10T21:50"
         ]
       },
       {
@@ -448,7 +467,13 @@
           "2025-12-10T15:25",
           "2025-12-10T18:25"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Starlight Lakewood Center",
+    "address": "5200 Faculty Ave.\nLakewood, CA 90712",
+    "movies": [
       {
         "title": "Fackham Hall (2025)",
         "showtimes": [
@@ -601,7 +626,13 @@
           "2025-12-10T11:30",
           "2025-12-10T19:30"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "West Grove Cinemas",
+    "address": "12111 Valley View St.\nGarden Grove, CA 92845",
+    "movies": [
       {
         "title": "Five Nights at Freddy's 2 (2025)",
         "showtimes": [
@@ -630,7 +661,13 @@
           "2025-12-10T19:05",
           "2025-12-10T22:05"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Harkins Cerritos 16",
+    "address": "600 Los Cerritos Mall\nCerritos, CA 90703",
+    "movies": [
       {
         "title": "REBBECA: Becky G (2025)",
         "showtimes": [
@@ -769,7 +806,13 @@
         "showtimes": [
           "2025-12-10T13:00"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regency Westminster 10",
+    "address": "6721 Westminster Blvd.\nWestminster, CA 92683",
+    "movies": [
       {
         "title": "Five Nights at Freddy's 2 (2025)",
         "showtimes": [
@@ -840,7 +883,13 @@
           "2025-12-10T19:50",
           "2025-12-10T17:05"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regal Edwards Cerritos",
+    "address": "12761 Towne Center Drive\nCerritos, CA 90701",
+    "movies": [
       {
         "title": "Five Nights at Freddy's 2 (2025)",
         "showtimes": [
@@ -874,8 +923,7 @@
       {
         "title": "Eternity (2025)",
         "showtimes": [
-          "2025-12-10T12:15",
-          "2025-12-10T15:45"
+          "2025-12-10T12:15"
         ]
       },
       {
@@ -903,9 +951,15 @@
       {
         "title": "Now You See Me: Now You Don't (2025)",
         "showtimes": [
-          "2025-12-10T12:50",
           "2025-12-10T18:45",
           "2025-12-10T21:45"
+        ]
+      },
+      {
+        "title": "Meet, Greet & Bye (2025)",
+        "showtimes": [
+          "2025-12-10T12:50",
+          "2025-12-10T15:50"
         ]
       },
       {
@@ -921,7 +975,13 @@
           "2025-12-10T13:20",
           "2025-12-10T18:50"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Cinemark Century Huntington Beach and XD",
+    "address": "7777 Edinger Ave. Suite 170\nHuntington Beach, CA 92647",
+    "movies": [
       {
         "title": "A Christmas Story (1983)",
         "showtimes": [
@@ -1131,7 +1191,13 @@
         "showtimes": [
           "2025-12-10T10:35"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Krikorian Premiere Theatres",
+    "address": "8290 La Palma Ave.\nBuena Park, CA 90620",
+    "movies": [
       {
         "title": "Five Nights at Freddy's 2 (2025)",
         "showtimes": [

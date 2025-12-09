@@ -102,7 +102,13 @@
         "showtimes": [
           "2025-12-08T22:15"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Cinemark At The Pike Outlets and XD",
+    "address": "99 South Pine Avenue\nLong Beach, CA 90802",
+    "movies": [
       {
         "title": "Five Nights at Freddy's 2 (2025)",
         "showtimes": [
@@ -212,7 +218,13 @@
           "2025-12-08T17:25",
           "2025-12-08T20:10"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regal Edwards Long Beach ScreenX & IMAX",
+    "address": "7501 East Carson St.\nLong Beach, CA 90808",
+    "movies": [
       {
         "title": "REGAL: Monday Mystery Movie",
         "showtimes": [
@@ -234,9 +246,9 @@
       {
         "title": "Dhurandhar (2025)",
         "showtimes": [
-          "2025-12-08T21:55",
           "2025-12-08T12:15",
           "2025-12-08T16:50",
+          "2025-12-08T21:20",
           "2025-12-08T21:25"
         ]
       },
@@ -255,9 +267,12 @@
         "showtimes": [
           "2025-12-08T11:05",
           "2025-12-08T12:05",
+          "2025-12-08T12:25",
           "2025-12-08T13:50",
+          "2025-12-08T15:05",
           "2025-12-08T15:45",
           "2025-12-08T16:35",
+          "2025-12-08T18:55",
           "2025-12-08T19:20",
           "2025-12-08T22:10",
           "2025-12-08T13:05",
@@ -274,9 +289,12 @@
         "showtimes": [
           "2025-12-08T12:20",
           "2025-12-08T17:20",
+          "2025-12-08T20:20",
           "2025-12-08T22:20",
           "2025-12-08T14:50",
-          "2025-12-08T19:50"
+          "2025-12-08T17:45",
+          "2025-12-08T19:50",
+          "2025-12-08T22:45"
         ]
       },
       {
@@ -403,10 +421,10 @@
       {
         "title": "Chainsaw Man - The Movie: Reze Arc (2025)",
         "showtimes": [
+          "2025-12-08T21:55",
           "2025-12-08T13:25",
           "2025-12-08T16:05",
-          "2025-12-08T18:40",
-          "2025-12-08T21:20"
+          "2025-12-08T18:40"
         ]
       },
       {
@@ -420,15 +438,15 @@
       {
         "title": "One Battle After Another (2025)",
         "showtimes": [
-          "2025-12-08T12:45",
-          "2025-12-08T20:20"
+          "2025-12-08T11:40",
+          "2025-12-08T22:05"
         ]
       },
       {
         "title": "Demon Slayer: Kimetsu no Yaiba Infinity Castle (2025)",
         "showtimes": [
-          "2025-12-08T16:25",
-          "2025-12-08T22:40"
+          "2025-12-08T22:40",
+          "2025-12-08T15:15"
         ]
       },
       {
@@ -436,7 +454,13 @@
         "showtimes": [
           "2025-12-08T11:50"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Starlight Lakewood Center",
+    "address": "5200 Faculty Ave.\nLakewood, CA 90712",
+    "movies": [
       {
         "title": "Fackham Hall (2025)",
         "showtimes": [
@@ -584,7 +608,13 @@
           "2025-12-08T16:45",
           "2025-12-08T22:15"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "West Grove Cinemas",
+    "address": "12111 Valley View St.\nGarden Grove, CA 92845",
+    "movies": [
       {
         "title": "Five Nights at Freddy's 2 (2025)",
         "showtimes": [
@@ -610,7 +640,13 @@
           "2025-12-08T15:25",
           "2025-12-08T19:05"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Harkins Cerritos 16",
+    "address": "600 Los Cerritos Mall\nCerritos, CA 90703",
+    "movies": [
       {
         "title": "Fackham Hall (2025)",
         "showtimes": [
@@ -739,7 +775,13 @@
         "showtimes": [
           "2025-12-08T19:00"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regency Westminster 10",
+    "address": "6721 Westminster Blvd.\nWestminster, CA 92683",
+    "movies": [
       {
         "title": "Five Nights at Freddy's 2 (2025)",
         "showtimes": [
@@ -810,7 +852,13 @@
           "2025-12-08T19:50",
           "2025-12-08T17:05"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regal Edwards Cerritos",
+    "address": "12761 Towne Center Drive\nCerritos, CA 90701",
+    "movies": [
       {
         "title": "REGAL: Monday Mystery Movie",
         "showtimes": [
@@ -879,9 +927,14 @@
         "title": "Now You See Me: Now You Don't (2025)",
         "showtimes": [
           "2025-12-08T12:50",
-          "2025-12-08T15:45",
-          "2025-12-08T18:45",
           "2025-12-08T21:45"
+        ]
+      },
+      {
+        "title": "Meet, Greet & Bye (2025)",
+        "showtimes": [
+          "2025-12-08T15:50",
+          "2025-12-08T18:45"
         ]
       },
       {
@@ -891,7 +944,13 @@
           "2025-12-08T15:50",
           "2025-12-08T21:55"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Cinemark Century Huntington Beach and XD",
+    "address": "7777 Edinger Ave. Suite 170\nHuntington Beach, CA 92647",
+    "movies": [
       {
         "title": "Dhurandhar (2025)",
         "showtimes": [
@@ -1085,7 +1144,13 @@
         "showtimes": [
           "2025-12-08T10:35"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Krikorian Premiere Theatres",
+    "address": "8290 La Palma Ave.\nBuena Park, CA 90620",
+    "movies": [
       {
         "title": "Five Nights at Freddy's 2 (2025)",
         "showtimes": [

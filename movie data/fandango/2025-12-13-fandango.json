@@ -17,7 +17,13 @@
           "2025-12-13T19:05",
           "2025-12-13T22:15"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Cinemark At The Pike Outlets and XD",
+    "address": "99 South Pine Avenue\nLong Beach, CA 90802",
+    "movies": [
       {
         "title": "The Metropolitan Opera: Andrea Chénier (2025)",
         "showtimes": [
@@ -66,7 +72,13 @@
         "showtimes": [
           "2025-12-13T10:30"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regal Edwards Long Beach ScreenX & IMAX",
+    "address": "7501 East Carson St.\nLong Beach, CA 90808",
+    "movies": [
       {
         "title": "Dick Van Dyke 100th Celebration",
         "showtimes": [
@@ -124,7 +136,13 @@
         "showtimes": [
           "2025-12-13T11:25"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Starlight Lakewood Center",
+    "address": "5200 Faculty Ave.\nLakewood, CA 90712",
+    "movies": [
       {
         "title": "Ella McCay (2025)",
         "showtimes": [
@@ -134,7 +152,18 @@
           "2025-12-13T19:15",
           "2025-12-13T22:00"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "West Grove Cinemas",
+    "address": "12111 Valley View St.\nGarden Grove, CA 92845",
+    "movies": []
+  },
+  {
+    "theater_name": "Harkins Cerritos 16",
+    "address": "600 Los Cerritos Mall\nCerritos, CA 90703",
+    "movies": [
       {
         "title": "Dr. Seuss’ How the Grinch Stole Christmas (2000): 25th Anniversary",
         "showtimes": [
@@ -164,7 +193,18 @@
         "showtimes": [
           "2025-12-13T19:10"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Regency Westminster 10",
+    "address": "6721 Westminster Blvd.\nWestminster, CA 92683",
+    "movies": []
+  },
+  {
+    "theater_name": "Regal Edwards Cerritos",
+    "address": "12761 Towne Center Drive\nCerritos, CA 90701",
+    "movies": [
       {
         "title": "Dr. Seuss’ How the Grinch Stole Christmas (2000): 25th Anniversary",
         "showtimes": [
@@ -186,7 +226,13 @@
         "showtimes": [
           "2025-12-13T12:10"
         ]
-      },
+      }
+    ]
+  },
+  {
+    "theater_name": "Cinemark Century Huntington Beach and XD",
+    "address": "7777 Edinger Ave. Suite 170\nHuntington Beach, CA 92647",
+    "movies": [
       {
         "title": "Dick Van Dyke 100th Celebration",
         "showtimes": [
@@ -273,6 +319,22 @@
         "showtimes": [
           "2025-12-13T09:40",
           "2025-12-13T12:00"
+        ]
+      }
+    ]
+  },
+  {
+    "theater_name": "Krikorian Premiere Theatres",
+    "address": "8290 La Palma Ave.\nBuena Park, CA 90620",
+    "movies": [
+      {
+        "title": "Silent Night, Deadly Night (2025)",
+        "showtimes": [
+          "2025-12-13T12:10",
+          "2025-12-13T14:40",
+          "2025-12-13T17:10",
+          "2025-12-13T19:40",
+          "2025-12-13T22:10"
         ]
       }
     ]

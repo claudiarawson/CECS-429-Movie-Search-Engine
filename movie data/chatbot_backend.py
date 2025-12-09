@@ -140,5 +140,5 @@ class MovieChatbot:
 
 if __name__ == "__main__":
     # Update this path to your JSON file
-    chatbot = MovieChatbot("fandango/2025-12-05-fandango.json")
+    chatbot = MovieChatbot("fandango/2025-12-07-fandango.json")
     chatbot.run()
