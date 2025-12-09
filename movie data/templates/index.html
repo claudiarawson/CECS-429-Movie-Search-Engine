@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Movie Showtime Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-slate-950 to-slate-800 text-slate-100">
+  <div class="max-w-5xl mx-auto px-4 py-10">
+    <!-- Header -->
+    <header class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-8">
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight">
+          🎬 Movie Showtime Finder
+        </h1>
+        <p class="mt-1 text-slate-300 text-sm sm:text-base">
+          Search movies & theaters, filter by date and time, and see where things are playing.
+        </p>
+      </div>
+      <div class="mt-2 sm:mt-0 text-right text-xs text-slate-400">
+        <p>Powered by your Fandango scraper</p>
+      </div>
+    </header>
+
+    <!-- Card -->
+    <main class="bg-slate-900/70 border border-slate-800 shadow-2xl shadow-black/40 rounded-2xl p-5 sm:p-6 backdrop-blur">
+      <!-- Mode toggle -->
+      <div class="flex gap-2 mb-4">
+        <button id="mode-movie"
+          class="flex-1 px-3 py-2 rounded-xl text-sm font-medium border border-slate-700 bg-slate-800/80 hover:bg-slate-700 transition focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          Search by Movie
+        </button>
+        <button id="mode-theater"
+          class="flex-1 px-3 py-2 rounded-xl text-sm font-medium border border-slate-800 bg-transparent hover:bg-slate-800/60 transition focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          Search by Theater
+        </button>
+      </div>
+
+      <!-- Search + filters -->
+      <section class="space-y-4 mb-6">
+        <!-- Search bar -->
+        <div class="flex flex-col sm:flex-row gap-3">
+          <div class="flex-1 relative">
+            <input id="search-input" type="text" placeholder="e.g. Inside Out, AMC, Regal..."
+              class="w-full rounded-xl bg-slate-950/60 border border-slate-700 px-3 py-2.5 text-sm sm:text-base placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent" />
+            <span
+              class="absolute inset-y-0 right-3 flex items-center text-slate-500 text-xs sm:text-sm pointer-events-none">Enter to
+              search</span>
+          </div>
+          <button id="search-btn"
+            class="flex items-center justify-center px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-semibold text-sm sm:text-base shadow-lg shadow-emerald-500/30 transition">
+            🔍 Search
+          </button>
+        </div>
+
+        <!-- Filters -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm bg-slate-950/40 border border-slate-800 rounded-xl p-3 sm:p-4">
+          <div class="flex flex-col gap-1">
+            <label for="date-input" class="text-slate-300 font-medium">Date</label>
+            <input id="date-input" type="date"
+              class="rounded-lg bg-slate-950/80 border border-slate-700 px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-slate-100 text-xs sm:text-sm" />
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <label for="start-input" class="text-slate-300 font-medium">Earliest time</label>
+            <input id="start-input" type="time"
+              class="rounded-lg bg-slate-950/80 border border-slate-700 px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-slate-100 text-xs sm:text-sm" />
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <label for="end-input" class="text-slate-300 font-medium">Latest time</label>
+            <input id="end-input" type="time"
+              class="rounded-lg bg-slate-950/80 border border-slate-700 px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent text-slate-100 text-xs sm:text-sm" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Browse section -->
+      <section class="mb-6">
+        <details class="group">
+          <summary
+            class="flex items-center justify-between cursor-pointer select-none text-sm text-slate-300 py-1">
+            <span class="font-medium">Or browse everything</span>
+            <span class="text-xs text-slate-500 group-open:hidden">click to expand</span>
+            <span class="text-xs text-slate-500 hidden group-open:inline">click to collapse</span>
+          </summary>
+          <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs max-h-64 overflow-y-auto pr-1">
+            <div>
+              <h3 class="text-slate-300 font-semibold mb-1">Movies</h3>
+              <ul id="browse-movies" class="space-y-1 text-slate-400 text-xs"></ul>
+            </div>
+            <div>
+              <h3 class="text-slate-300 font-semibold mb-1">Theaters</h3>
+              <ul id="browse-theaters" class="space-y-1 text-slate-400 text-xs"></ul>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- Status / error -->
+      <p id="status" class="text-xs text-slate-400 mb-3 h-4"></p>
+
+      <!-- Results -->
+      <section id="results" class="space-y-4 max-h-[28rem] overflow-y-auto pr-1">
+        <!-- cards via JS -->
+      </section>
+    </main>
+
+    <footer class="mt-8 text-center text-xs text-slate-500">
+      <p>Built on top of your Python query engine & Fandango JSON scraper.</p>
+    </footer>
+  </div>
+
+  <script>
+    const modeMovieBtn = document.getElementById("mode-movie");
+    const modeTheaterBtn = document.getElementById("mode-theater");
+    const searchInput = document.getElementById("search-input");
+    const searchBtn = document.getElementById("search-btn");
+    const dateInput = document.getElementById("date-input");
+    const startInput = document.getElementById("start-input");
+    const endInput = document.getElementById("end-input");
+    const statusEl = document.getElementById("status");
+    const resultsEl = document.getElementById("results");
+    const browseMoviesEl = document.getElementById("browse-movies");
+    const browseTheatersEl = document.getElementById("browse-theaters");
+
+    let currentMode = "movie";
+
+    // --- Helpers ---
+    function setMode(mode) {
+      currentMode = mode;
+      if (mode === "movie") {
+        modeMovieBtn.classList.add("bg-slate-800/80", "border-slate-700");
+        modeMovieBtn.classList.remove("bg-transparent", "border-slate-800");
+        modeTheaterBtn.classList.remove("bg-slate-800/80", "border-slate-700");
+        modeTheaterBtn.classList.add("bg-transparent", "border-slate-800");
+        searchInput.placeholder = "e.g. Dune, Inside Out...";
+      } else {
+        modeTheaterBtn.classList.add("bg-slate-800/80", "border-slate-700");
+        modeTheaterBtn.classList.remove("bg-transparent", "border-slate-800");
+        modeMovieBtn.classList.remove("bg-slate-800/80", "border-slate-700");
+        modeMovieBtn.classList.add("bg-transparent", "border-slate-800");
+        searchInput.placeholder = "e.g. AMC, Regal, Cinemark...";
+      }
+      statusEl.textContent = "";
+      resultsEl.innerHTML = "";
+    }
+
+    function formatShowtime(iso) {
+      if (!iso.includes("T")) return iso;
+      const [date, time] = iso.split("T");
+      const [hour, minute] = time.split(":");
+      const d = new Date(`${date}T${time}:00`);
+      if (isNaN(d.getTime())) return time;
+      return d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>"']/g, c => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      }[c]));
+    }
+
+    // --- Rendering ---
+
+    function renderMovieResults(results) {
+      resultsEl.innerHTML = "";
+      if (!results || results.length === 0) {
+        resultsEl.innerHTML = `<p class="text-sm text-slate-300">No results found.</p>`;
+        return;
+      }
+
+      results.forEach((item, idx) => {
+        const title = escapeHtml(item.title || "");
+        const score = item.score ?? "?";
+        const theaters = item.theaters || [];
+
+        const theaterHtml = theaters.map(th => {
+          const tName = escapeHtml(th.theater_name || "");
+          const address = escapeHtml(th.address || "");
+          const times = (th.showtimes || []).slice(0, 10).map(formatShowtime);
+          const extra = (th.showtimes || []).length > 10 ? `<span class="text-xs text-slate-400 ml-1">+${th.showtimes.length - 10} more</span>` : "";
+
+          return `
+            <div class="border border-slate-800 rounded-xl p-3 bg-slate-950/50 space-y-1">
+              <div class="flex justify-between items-center gap-2">
+                <p class="font-semibold text-sm">${tName}</p>
+              </div>
+              <p class="text-xs text-slate-400">${address}</p>
+              <div class="mt-2 flex flex-wrap gap-1">
+                ${times.map(t => `<span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-200 text-xs">${t}</span>`).join("")}
+                ${extra}
+              </div>
+            </div>
+          `;
+        }).join("");
+
+        const card = document.createElement("article");
+        card.className = "rounded-2xl border border-slate-800 bg-slate-950/60 p-4 space-y-3";
+        card.innerHTML = `
+          <div class="flex justify-between items-start gap-3">
+            <div>
+              <h2 class="font-semibold text-lg">${idx + 1}. ${title}</h2>
+              <p class="text-xs text-slate-400">Match score: ${score}%</p>
+            </div>
+          </div>
+          <div class="space-y-2">
+            ${theaterHtml || `<p class="text-xs text-slate-400">No showtimes found.</p>`}
+          </div>
+        `;
+        resultsEl.appendChild(card);
+      });
+    }
+
+    function renderTheaterResults(results) {
+      resultsEl.innerHTML = "";
+      if (!results || results.length === 0) {
+        resultsEl.innerHTML = `<p class="text-sm text-slate-300">No results found.</p>`;
+        return;
+      }
+
+      results.forEach((item, idx) => {
+        const name = escapeHtml(item.name || "");
+        const address = escapeHtml(item.address || "");
+        const score = item.score ?? "?";
+        const movies = item.movies || [];
+
+        const movieHtml = movies.slice(0, 5).map(m => {
+          const title = escapeHtml(m.title || "");
+          const times = (m.showtimes || []).slice(0, 5).map(formatShowtime);
+          const extra = (m.showtimes || []).length > 5 ? `<span class="text-xs text-slate-400 ml-1">+${m.showtimes.length - 5} more</span>` : "";
+
+          return `
+            <div class="border border-slate-800 rounded-xl p-3 bg-slate-950/50">
+              <p class="font-semibold text-sm mb-1">${title}</p>
+              <div class="flex flex-wrap gap-1">
+                ${times.map(t => `<span class="px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-200 text-xs">${t}</span>`).join("")}
+                ${extra}
+              </div>
+            </div>
+          `;
+        }).join("");
+
+        const extraMoviesText = movies.length > 5
+          ? `<p class="text-xs text-slate-400 mt-1">+${movies.length - 5} more movie(s) at this theater</p>`
+          : "";
+
+        const card = document.createElement("article");
+        card.className = "rounded-2xl border border-slate-800 bg-slate-950/60 p-4 space-y-3";
+        card.innerHTML = `
+          <div class="flex justify-between items-start gap-3">
+            <div>
+              <h2 class="font-semibold text-lg">${idx + 1}. ${name}</h2>
+              <p class="text-xs text-slate-400">Match score: ${score}%</p>
+              <p class="text-xs text-slate-400 mt-1">${address}</p>
+            </div>
+          </div>
+          <div class="space-y-2">
+            ${movieHtml || `<p class="text-xs text-slate-400">No showtimes found.</p>`}
+            ${extraMoviesText}
+          </div>
+        `;
+        resultsEl.appendChild(card);
+      });
+    }
+
+    // --- Fetch calls ---
+
+    async function doSearch(queryFromBrowse = null) {
+      const q = (queryFromBrowse ?? searchInput.value).trim();
+      const date = dateInput.value;
+      const start = startInput.value;
+      const end = endInput.value;
+
+      if (!q) {
+        statusEl.textContent = "Type something to search.";
+        return;
+      }
+
+      statusEl.textContent = "Searching...";
+      resultsEl.innerHTML = "";
+
+      const params = new URLSearchParams({
+        mode: currentMode,
+        q,
+      });
+      if (date) params.set("date", date);
+      if (start) params.set("start", start);
+      if (end) params.set("end", end);
+
+      try {
+        const res = await fetch(`/api/search?${params.toString()}`);
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          statusEl.textContent = err.error || "Error fetching results.";
+          return;
+        }
+        const data = await res.json();
+        statusEl.textContent = `Found ${data.length} result(s).`;
+
+        if (currentMode === "movie") {
+          renderMovieResults(data);
+        } else {
+          renderTheaterResults(data);
+        }
+      } catch (e) {
+        console.error(e);
+        statusEl.textContent = "Network error. Is the server running?";
+      }
+    }
+
+    async function loadBrowseLists() {
+      try {
+        const [moviesRes, theatersRes] = await Promise.all([
+          fetch("/api/movies"),
+          fetch("/api/theaters"),
+        ]);
+        const movies = await moviesRes.json();
+        const theaters = await theatersRes.json();
+
+        browseMoviesEl.innerHTML = movies.map(title => `
+          <li>
+            <button class="text-left w-full hover:text-emerald-300 transition"
+              data-type="movie">${escapeHtml(title)}</button>
+          </li>
+        `).join("");
+
+        browseTheatersEl.innerHTML = theaters.map(t => `
+          <li>
+            <button class="text-left w-full hover:text-emerald-300 transition"
+              data-type="theater">${escapeHtml(t.name || "")}</button>
+          </li>
+        `).join("");
+
+        // Click handlers
+        browseMoviesEl.addEventListener("click", (e) => {
+          if (e.target.tagName.toLowerCase() === "button") {
+            setMode("movie");
+            const title = e.target.textContent;
+            searchInput.value = title;
+            doSearch(title);
+          }
+        });
+        browseTheatersEl.addEventListener("click", (e) => {
+          if (e.target.tagName.toLowerCase() === "button") {
+            setMode("theater");
+            const name = e.target.textContent;
+            searchInput.value = name;
+            doSearch(name);
+          }
+        });
+
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    // --- Event listeners ---
+    modeMovieBtn.addEventListener("click", () => setMode("movie"));
+    modeTheaterBtn.addEventListener("click", () => setMode("theater"));
+
+    searchBtn.addEventListener("click", () => doSearch());
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") doSearch();
+    });
+
+    // Init
+    setMode("movie");
+    loadBrowseLists();
+  </script>
+</body>
+</html>
