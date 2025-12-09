@@ -1,11 +1,25 @@
 from flask import Flask, render_template, request, jsonify
 from query_engine import MovieQueryEngine
 from datetime import datetime
+import os
+import glob
 
 app = Flask(__name__)
 
-# TODO: change this to the actual JSON file you generated
-DATA_PATH = "fandango/2025-12-05-fandango.json"
+# Find latest JSON scraped file in the 'movie data' folder
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Look for any file ending with "-fandango.json" (no matter the date)
+json_files = sorted(
+    glob.glob(os.path.join(BASE_DIR, "*-fandango.json"))
+)
+
+if not json_files:
+    raise FileNotFoundError("No scraped Fandango JSON found. Run the scraper first.")
+
+DATA_PATH = json_files[-1]  # pick the newest one
+print("Using movie data file:", DATA_PATH)
+
 engine = MovieQueryEngine(DATA_PATH)
 
 
